@@ -3,20 +3,46 @@ import './App.css';
 
 function App() {
   
-  let a=10,b=23,sum=0;
-  sum=a+b;
-  let miss;
-  if(sum!=0){
-    miss=<button>Sum Got</button>
+  const arr=[
+    {
+      name : "Abhi",
+      course : "MCA",
+      gender  : "male"
+
+  },
+  {
+    name : "Shelvin",
+    course : "MCA",
+    gender  : "male"
+
+  },
+  {
+    name : "Arya",
+    course : "MCA",
+    gender  : "trans"
+
+  },
+  {
+    name : "Joyce",
+    course : "MCA",
+    gender  : "!male"
+
   }
-  else{
-    miss=<button>Summm Zero</button>
-  }
+  ];
   return(
+    
     <div>
-      {miss}
-    </div>
-  );
+      <ul>{
+          arr.map((ar)=>{
+            return <div>
+              <li> Name : {ar.name} | Course : {ar.course}</li>
+            </div>
+          })
+    }
+    </ul>
+    </div>  
+  ) ;
+      
 }
 
 export default App;
