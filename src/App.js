@@ -1,45 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import SignUp from './SignUp';
+import Assign from './Assign';
+import Counter from './Counter';
+import Top from './Top';
+import Product from './Product';
 
 function App() {
-  
-  const arr=[
-    {
-      name : "Abhi",
-      course : "MCA",
-      gender  : "male"
-
-  },
-  {
-    name : "Shelvin",
-    course : "MCA",
-    gender  : "male"
-
-  },
-  {
-    name : "Arya",
-    course : "MCA",
-    gender  : "trans"
-
-  },
-  {
-    name : "Joyce",
-    course : "MCA",
-    gender  : "!male"
-
-  }
-  ];
   return(
     
-    <div>
-      <ul>{
-          arr.map((ar)=>{
-            return <div>
-              <li> Name : {ar.name} | Course : {ar.course}</li>
-            </div>
-          })
-    }
-    </ul>
+    <div className='App-header'>
+      <h1>Product List</h1>
+      <Product product="Laptop" price="999" desc="High performance laptop."/>
+      <Product product="Smartphone" price="699" desc="Latest bullcrap laggy phone."/>
+      <Product product="Headphone" price="199" desc="Noise cancellation it seems."/>
+      {/* <SignUp/> */}
     </div>  
   ) ;
       
